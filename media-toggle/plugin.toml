@@ -1,0 +1,19 @@
+# A single media play/pause bar widget whose glyph follows the real MPRIS state.
+# Noctalia's built-in `custom_button` glyph is static, so a pause pressed
+# elsewhere (player window, hardware key, phone) leaves the icon stale. This
+# widget streams `playerctl --follow status` and swaps the glyph on every change.
+
+id = "ech678/media-toggle"
+name = "Media Toggle"
+version = "1.0.0"
+plugin_api = 43
+author = "Echoes678"
+license = "MIT"
+dependencies = ["playerctl"]
+tags = ["media", "bar"]
+icon = "player-play"
+description = "Play/pause bar button whose icon follows the active MPRIS player."
+
+[[widget]]
+id = "toggle"
+entry = "widget.luau"

@@ -1,0 +1,4 @@
+# Ignore editor and OS litter.
+*~
+*.swp
+.DS_Store
